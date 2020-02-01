@@ -154,7 +154,10 @@ class Zoom_Advanced(ttk.Frame):
             self.canvas.imagetk = imagetk  # keep an extra reference to prevent garbage-collection
 
 # path = '/home/jericolinux/workspace/codes/upcapes/src/evalform2.png'  # place path to your image here
-path = './src/EEEI-TALK/weird/EEEI-TALK-08.png'
+# filename = input("Filename: ")
+# path = f'./img/EEEI-TALK-03.png'
+path = f'./img/CHE-TALK-11.png'
+# path = f'./img/shape2.png'
 root = tk.Tk()
 root.minsize(600,500)
 app = Zoom_Advanced(root, path=path)
