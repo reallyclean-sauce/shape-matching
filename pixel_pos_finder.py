@@ -155,7 +155,8 @@ class Zoom_Advanced(ttk.Frame):
 
 # path = '/home/jericolinux/workspace/codes/upcapes/src/evalform2.png'  # place path to your image here
 # filename = input("Filename: ")
-# path = f'./img/EEEI-TALK-03.png'
+# path = f'./src/corrected/EEEI-TALK-27.png'
+# path = f'./src/corrected/EEEI-TALK-49.png'
 path = f'./img/CHE-TALK-11.png'
 # path = f'./img/shape2.png'
 root = tk.Tk()

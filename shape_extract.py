@@ -32,7 +32,7 @@ def to_negative(img):
 def im_close(img):
     kernel = np.ones((5,5),np.uint8)
     return cv2.morphologyEx(img, cv2.MORPH_CLOSE, kernel)
-    
+
 
 def preprocess(img):
     return im_close(to_negative(to_binary(to_grayscale(img))))
@@ -41,24 +41,24 @@ def preprocess(img):
 if __name__ == "__main__":
     path = f'./img/CHE-TALK-11.png'
     img = cv2.imread(path)
-    
+
     # Get the shapes to detect
     shape1 = [(78,81),(251,213)]
     shape2 = [(1540,78),(1639,185)]
     shape3 = [(77,959),(172,1042)]
     shape4 = [(1528,960),(1630,1048)]
-    
+
     shape1 = extract_boundbox(img, shape1)
     shape2 = extract_boundbox(img, shape2)
     shape3 = extract_boundbox(img, shape3)
     shape4 = extract_boundbox(img, shape4)
-    
+
     # shape1 =  preprocess(shape1)
     # shape2 =  preprocess(shape2)
     # shape3 =  preprocess(shape3)
     # shape4 =  preprocess(shape4)
-    
-    
+
+
     cv2.imwrite(f'./{dest_folder}/shape1.png', shape1)
     cv2.imwrite(f'./{dest_folder}/shape2.png', shape2)
     cv2.imwrite(f'./{dest_folder}/shape3.png', shape3)
